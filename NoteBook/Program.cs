@@ -120,30 +120,29 @@ namespace NoteBook
 
 
             // Создаем переменные для коректного расположения по центру консоли
-            string data = ($"{Name1,15} {age1,10} {height1,10} {history1,10} {mathematics1,10} {russian1,10} {markSum1,10}");
+            string data1 = ($"{Name1,15} {age1,10} {height1,10} {history1,10} {mathematics1,10} {russian1,10} {markSum1,10}");
             string data2 = ($"{Name2,15} {age2,10} {height2,10} {history2,10} {mathematics2,10} {russian2,10} {markSum2,10}");
             string data3 = ($"{Name3,15} {age3,10} {height3,10} {history3,10} {mathematics3,10} {russian3,10} {markSum3,10}");
             string header = ($"{"Имя",15} {"Рост",10} {"Возраст",10} {"История",10} {"Математика",10} {"Русский",10} {"Средний бал",10}");
+            
 
 
             // Измеряем размер консоли для росположения текста по центру
             Console.SetCursorPosition((Console.WindowWidth - header.Length) / 2, Console.CursorTop);
-            Console.SetCursorPosition((Console.WindowHeight - header.Length) / 2, Console.CursorTop);
+            Console.SetCursorPosition(Console.WindowHeight / 2, Console.CursorLeft);
             // Выводим Заголовки колонок базы данных
             Console.WriteLine(header);
 
-            //// Изменяем цвет шрифта для печати в консоли на Gray
-            //Console.ForegroundColor = ConsoleColor.Gray;
 
-            //// Печатаем в консоль всех студентов
-            //Console.SetCursorPosition((Console.WindowWidth - data.Length) / 2, Console.CursorTop);
-            //Console.WriteLine(data);
+            //Печатаем в консоль всех студентов
+            Console.SetCursorPosition((Console.WindowWidth - data1.Length) / 2, Console.CursorTop);            
+            Console.WriteLine(data1);
 
-            //Console.SetCursorPosition((Console.WindowWidth - data2.Length) / 2, Console.CursorTop);
-            //Console.WriteLine(data2);
+            Console.SetCursorPosition((Console.WindowWidth - data2.Length) / 2, Console.CursorTop);            
+            Console.WriteLine(data2);
 
-            //Console.SetCursorPosition((Console.WindowWidth - data3.Length) / 2, Console.CursorTop);
-            //Console.WriteLine(data3);
+            Console.SetCursorPosition((Console.WindowWidth - data3.Length) / 2, Console.CursorTop);           
+            Console.WriteLine(data3);
 
             Console.ReadKey();
 
@@ -161,11 +160,6 @@ namespace NoteBook
             //Console.ReadKey();
 
 
-            Console.WriteLine("The current buffer height is {0} rows.",
-                                  Console.BufferHeight);
-            Console.WriteLine("The current buffer width is {0} columns.",
-                                  Console.BufferWidth);
-            
 
         }
 
